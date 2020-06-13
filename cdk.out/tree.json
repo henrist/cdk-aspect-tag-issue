@@ -22,6 +22,12 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
                   "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "Test2",
+                        "value": "Value2"
+                      }
+                    ],
                     "visibilityTimeout": 300
                   }
                 }

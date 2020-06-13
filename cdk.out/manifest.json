@@ -49,7 +49,7 @@
               "Queue.addToResourcePolicy (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sqs/lib/queue-base.ts:146:21)",
               "SqsSubscription.bind (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sns-subscriptions/lib/sqs.ts:40:16)",
               "Topic.addSubscription (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sns/lib/topic-base.ts:66:45)",
-              "new AspectTagIssueStack (/home/henrste/projects/henrist/cdk/aspect-tag-issue/lib/aspect-tag-issue-stack.ts:16:11)",
+              "new AspectTagIssueStack (/home/henrste/projects/henrist/cdk/aspect-tag-issue/lib/aspect-tag-issue-stack.ts:18:11)",
               "Object.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/bin/aspect-tag-issue.ts:6:1)",
               "Module._compile (internal/modules/cjs/loader.js:956:30)",
               "Module.m._compile (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/index.ts:858:23)",
@@ -76,7 +76,7 @@
             "trace": [
               "new Subscription (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sns/lib/subscription.ts:107:5)",
               "Topic.addSubscription (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sns/lib/topic-base.ts:80:5)",
-              "new AspectTagIssueStack (/home/henrste/projects/henrist/cdk/aspect-tag-issue/lib/aspect-tag-issue-stack.ts:16:11)",
+              "new AspectTagIssueStack (/home/henrste/projects/henrist/cdk/aspect-tag-issue/lib/aspect-tag-issue-stack.ts:18:11)",
               "Object.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/bin/aspect-tag-issue.ts:6:1)",
               "Module._compile (internal/modules/cjs/loader.js:956:30)",
               "Module.m._compile (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/index.ts:858:23)",
@@ -102,7 +102,7 @@
             "data": "AspectTagIssueTopic1BCACDC2",
             "trace": [
               "new Topic (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sns/lib/topic.ts:68:22)",
-              "new AspectTagIssueStack (/home/henrste/projects/henrist/cdk/aspect-tag-issue/lib/aspect-tag-issue-stack.ts:14:19)",
+              "new AspectTagIssueStack (/home/henrste/projects/henrist/cdk/aspect-tag-issue/lib/aspect-tag-issue-stack.ts:16:19)",
               "Object.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/bin/aspect-tag-issue.ts:6:1)",
               "Module._compile (internal/modules/cjs/loader.js:956:30)",
               "Module.m._compile (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/index.ts:858:23)",

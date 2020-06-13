@@ -11,6 +11,8 @@ export class AspectTagIssueStack extends cdk.Stack {
       visibilityTimeout: cdk.Duration.seconds(300)
     });
 
+    cdk.Tag.add(queue, "Test2", "Value2");
+
     const topic = new sns.Topic(this, 'AspectTagIssueTopic');
 
     topic.addSubscription(new subs.SqsSubscription(queue));

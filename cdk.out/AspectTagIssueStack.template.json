@@ -3,6 +3,12 @@
     "AspectTagIssueQueueC20D2F62": {
       "Type": "AWS::SQS::Queue",
       "Properties": {
+        "Tags": [
+          {
+            "Key": "Test2",
+            "Value": "Value2"
+          }
+        ],
         "VisibilityTimeout": 300
       },
       "Metadata": {
