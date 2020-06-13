@@ -12,6 +12,7 @@ app.node.applyAspect({
         cdk.Stack.isStack(it),
       )
       if (stack != null) {
+        console.info("Adding tag")
         cdk.Tag.add(construct, "Test", "Value")
       }
     }
