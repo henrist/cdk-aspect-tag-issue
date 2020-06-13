@@ -14,6 +14,33 @@
         "templateFile": "AspectTagIssueStack.template.json"
       },
       "metadata": {
+        "/AspectTagIssueStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "Test",
+                "Value": "Value"
+              }
+            ],
+            "trace": [
+              "ConstructNode.addMetadata (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/core/lib/construct-compat.ts:400:92)",
+              "Object.addStackArtifactToAssembly (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/core/lib/stack-synthesizers/_shared.ts:26:16)",
+              "LegacyStackSynthesizer.synthesizeStackArtifacts (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:98:5)",
+              "AspectTagIssueStack.synthesize (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/core/lib/stack.ts:718:22)",
+              "AspectTagIssueStack.onSynthesize (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/core/lib/construct-compat.ts:123:10)",
+              "Node.synthesize (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/constructs/lib/construct.ts:407:28)",
+              "Function.synth (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/core/lib/construct-compat.ts:231:22)",
+              "App.synth (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/core/lib/app.ts:142:36)",
+              "process.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/core/lib/app.ts:121:45)",
+              "Object.onceWrapper (events.js:300:26)",
+              "process.emit (events.js:210:5)",
+              "process.EventEmitter.emit (domain.js:476:20)",
+              "process.emit (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/source-map-support/source-map-support.js:495:21)",
+              "process.topLevelDomainCallback (domain.js:131:23)"
+            ]
+          }
+        ],
         "/AspectTagIssueStack/AspectTagIssueQueue/Resource": [
           {
             "type": "aws:cdk:logicalId",

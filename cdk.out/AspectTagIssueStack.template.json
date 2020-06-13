@@ -3,6 +3,12 @@
     "AspectTagIssueQueueC20D2F62": {
       "Type": "AWS::SQS::Queue",
       "Properties": {
+        "Tags": [
+          {
+            "Key": "Test",
+            "Value": "Value"
+          }
+        ],
         "VisibilityTimeout": 300
       },
       "Metadata": {
@@ -67,6 +73,14 @@
     },
     "AspectTagIssueTopic1BCACDC2": {
       "Type": "AWS::SNS::Topic",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Test",
+            "Value": "Value"
+          }
+        ]
+      },
       "Metadata": {
         "aws:cdk:path": "AspectTagIssueStack/AspectTagIssueTopic/Resource"
       }
