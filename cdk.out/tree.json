@@ -22,12 +22,6 @@
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
                   "aws:cdk:cloudformation:props": {
-                    "tags": [
-                      {
-                        "key": "Test",
-                        "value": "Value"
-                      }
-                    ],
                     "visibilityTimeout": 300
                   }
                 }
@@ -113,14 +107,7 @@
                 "path": "AspectTagIssueStack/AspectTagIssueTopic/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::SNS::Topic",
-                  "aws:cdk:cloudformation:props": {
-                    "tags": [
-                      {
-                        "key": "Test",
-                        "value": "Value"
-                      }
-                    ]
-                  }
+                  "aws:cdk:cloudformation:props": {}
                 }
               }
             }
