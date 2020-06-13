@@ -1,0 +1,119 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "AspectTagIssueStack": {
+        "id": "AspectTagIssueStack",
+        "path": "AspectTagIssueStack",
+        "children": {
+          "AspectTagIssueQueue": {
+            "id": "AspectTagIssueQueue",
+            "path": "AspectTagIssueStack/AspectTagIssueQueue",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "AspectTagIssueStack/AspectTagIssueQueue/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SQS::Queue",
+                  "aws:cdk:cloudformation:props": {
+                    "visibilityTimeout": 300
+                  }
+                }
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "AspectTagIssueStack/AspectTagIssueQueue/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AspectTagIssueStack/AspectTagIssueQueue/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SQS::QueuePolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sqs:SendMessage",
+                              "Condition": {
+                                "ArnEquals": {
+                                  "aws:SourceArn": {
+                                    "Ref": "AspectTagIssueTopic1BCACDC2"
+                                  }
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "sns.amazonaws.com"
+                              },
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "AspectTagIssueQueueC20D2F62",
+                                  "Arn"
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "queues": [
+                          {
+                            "Ref": "AspectTagIssueQueueC20D2F62"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "AspectTagIssueStackAspectTagIssueTopic8AF098C9": {
+                "id": "AspectTagIssueStackAspectTagIssueTopic8AF098C9",
+                "path": "AspectTagIssueStack/AspectTagIssueQueue/AspectTagIssueStackAspectTagIssueTopic8AF098C9",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "AspectTagIssueStack/AspectTagIssueQueue/AspectTagIssueStackAspectTagIssueTopic8AF098C9/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::SNS::Subscription",
+                      "aws:cdk:cloudformation:props": {
+                        "protocol": "sqs",
+                        "topicArn": {
+                          "Ref": "AspectTagIssueTopic1BCACDC2"
+                        },
+                        "endpoint": {
+                          "Fn::GetAtt": [
+                            "AspectTagIssueQueueC20D2F62",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "AspectTagIssueTopic": {
+            "id": "AspectTagIssueTopic",
+            "path": "AspectTagIssueStack/AspectTagIssueTopic",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "AspectTagIssueStack/AspectTagIssueTopic/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SNS::Topic",
+                  "aws:cdk:cloudformation:props": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

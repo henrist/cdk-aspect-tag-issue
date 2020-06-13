@@ -1,0 +1,75 @@
+{
+  "Resources": {
+    "AspectTagIssueQueueC20D2F62": {
+      "Type": "AWS::SQS::Queue",
+      "Properties": {
+        "VisibilityTimeout": 300
+      },
+      "Metadata": {
+        "aws:cdk:path": "AspectTagIssueStack/AspectTagIssueQueue/Resource"
+      }
+    },
+    "AspectTagIssueQueuePolicy57A9A689": {
+      "Type": "AWS::SQS::QueuePolicy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sqs:SendMessage",
+              "Condition": {
+                "ArnEquals": {
+                  "aws:SourceArn": {
+                    "Ref": "AspectTagIssueTopic1BCACDC2"
+                  }
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "sns.amazonaws.com"
+              },
+              "Resource": {
+                "Fn::GetAtt": [
+                  "AspectTagIssueQueueC20D2F62",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Queues": [
+          {
+            "Ref": "AspectTagIssueQueueC20D2F62"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "AspectTagIssueStack/AspectTagIssueQueue/Policy/Resource"
+      }
+    },
+    "AspectTagIssueQueueAspectTagIssueStackAspectTagIssueTopic8AF098C9138CE947": {
+      "Type": "AWS::SNS::Subscription",
+      "Properties": {
+        "Protocol": "sqs",
+        "TopicArn": {
+          "Ref": "AspectTagIssueTopic1BCACDC2"
+        },
+        "Endpoint": {
+          "Fn::GetAtt": [
+            "AspectTagIssueQueueC20D2F62",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "AspectTagIssueStack/AspectTagIssueQueue/AspectTagIssueStackAspectTagIssueTopic8AF098C9/Resource"
+      }
+    },
+    "AspectTagIssueTopic1BCACDC2": {
+      "Type": "AWS::SNS::Topic",
+      "Metadata": {
+        "aws:cdk:path": "AspectTagIssueStack/AspectTagIssueTopic/Resource"
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "version": "4.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "AspectTagIssueStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "AspectTagIssueStack.template.json"
+      },
+      "metadata": {
+        "/AspectTagIssueStack/AspectTagIssueQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AspectTagIssueQueueC20D2F62",
+            "trace": [
+              "new Queue (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sqs/lib/queue.ts:263:19)",
+              "new AspectTagIssueStack (/home/henrste/projects/henrist/cdk/aspect-tag-issue/lib/aspect-tag-issue-stack.ts:10:19)",
+              "Object.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/bin/aspect-tag-issue.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:956:30)",
+              "Module.m._compile (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:973:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:812:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:1025:10)",
+              "main (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:956:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:973:10)",
+              "Module.load (internal/modules/cjs/loader.js:812:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:1025:10)",
+              "/home/henrste/.nvm/versions/node/v12.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/AspectTagIssueStack/AspectTagIssueQueue/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AspectTagIssueQueuePolicy57A9A689",
+            "trace": [
+              "new QueuePolicy (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sqs/lib/policy.ts:28:5)",
+              "Queue.addToResourcePolicy (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sqs/lib/queue-base.ts:146:21)",
+              "SqsSubscription.bind (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sns-subscriptions/lib/sqs.ts:40:16)",
+              "Topic.addSubscription (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sns/lib/topic-base.ts:66:45)",
+              "new AspectTagIssueStack (/home/henrste/projects/henrist/cdk/aspect-tag-issue/lib/aspect-tag-issue-stack.ts:16:11)",
+              "Object.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/bin/aspect-tag-issue.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:956:30)",
+              "Module.m._compile (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:973:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:812:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:1025:10)",
+              "main (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:956:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:973:10)",
+              "Module.load (internal/modules/cjs/loader.js:812:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:1025:10)",
+              "/home/henrste/.nvm/versions/node/v12.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/AspectTagIssueStack/AspectTagIssueQueue/AspectTagIssueStackAspectTagIssueTopic8AF098C9/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AspectTagIssueQueueAspectTagIssueStackAspectTagIssueTopic8AF098C9138CE947",
+            "trace": [
+              "new Subscription (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sns/lib/subscription.ts:107:5)",
+              "Topic.addSubscription (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sns/lib/topic-base.ts:80:5)",
+              "new AspectTagIssueStack (/home/henrste/projects/henrist/cdk/aspect-tag-issue/lib/aspect-tag-issue-stack.ts:16:11)",
+              "Object.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/bin/aspect-tag-issue.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:956:30)",
+              "Module.m._compile (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:973:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:812:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:1025:10)",
+              "main (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:956:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:973:10)",
+              "Module.load (internal/modules/cjs/loader.js:812:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:1025:10)",
+              "/home/henrste/.nvm/versions/node/v12.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/AspectTagIssueStack/AspectTagIssueTopic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AspectTagIssueTopic1BCACDC2",
+            "trace": [
+              "new Topic (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/@aws-cdk/aws-sns/lib/topic.ts:68:22)",
+              "new AspectTagIssueStack (/home/henrste/projects/henrist/cdk/aspect-tag-issue/lib/aspect-tag-issue-stack.ts:14:19)",
+              "Object.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/bin/aspect-tag-issue.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:956:30)",
+              "Module.m._compile (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:973:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:812:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:1025:10)",
+              "main (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/home/henrste/projects/henrist/cdk/aspect-tag-issue/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:956:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:973:10)",
+              "Module.load (internal/modules/cjs/loader.js:812:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:724:14)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:1025:10)",
+              "/home/henrste/.nvm/versions/node/v12.13.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.44.0",
+      "@aws-cdk/cx-api": "1.44.0",
+      "@aws-cdk/cloud-assembly-schema": "1.44.0",
+      "@aws-cdk/cdk-assets-schema": "1.44.0",
+      "@aws-cdk/aws-sns": "1.44.0",
+      "@aws-cdk/aws-iam": "1.44.0",
+      "@aws-cdk/region-info": "1.44.0",
+      "@aws-cdk/aws-cloudwatch": "1.44.0",
+      "@aws-cdk/aws-sns-subscriptions": "1.44.0",
+      "@aws-cdk/aws-sqs": "1.44.0",
+      "@aws-cdk/aws-kms": "1.44.0",
+      "jsii-runtime": "node.js/v12.13.0"
+    }
+  }
+}
